@@ -1,0 +1,56 @@
+{
+  "displayName": "Get Active Purchases",
+  "defaultWidth": 160,
+  "defaultHeight": 36,
+  "components": "./index.js",
+  "icon": "./example-thumbnail.png",
+  "props": [
+    {
+      "name": "iaphubAppId",
+      "displayName": "App Id from IAPHUB",
+      "helperText": "Located on the settings page of your app in IAPHUB",
+      "type": "text",
+      "global": true
+    },
+    {
+      "name": "apiKey",
+      "displayName": "API Key",
+      "helperText": "Located on the settings page of your app in IAPHUB",
+      "type": "text",
+      "global": true
+    },
+    {
+      "name": "environment",
+      "displayName": "Environment",
+      "helperText": "You can set up different environments in IAPHUB for development and testing",
+      "type": "text",
+      "default": "production",
+      "global": true
+    },
+    {
+      "name": "userId",
+      "displayName": "User Id",
+      "helperText": "This is a unique identifier for the user that is NOT the email address",
+      "type": "text"
+    },
+    {
+      "name": "onActiveProductsReceived",
+      "displayName": "Triggered multiple times when the list of active products is received",
+      "type": "action",
+      "arguments": [
+        {
+          "type": "text",
+          "displayName": "SKU"
+        },
+        {
+          "type": "text",
+          "displayName": "Product type"
+        },
+        {
+          "type": "text",
+          "displayName": "Subscription State"
+        }
+      ]
+    }
+  ]
+}

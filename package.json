@@ -1,7 +1,7 @@
 {
   "name": "adalo-iaphub",
   "description": "Adalo IAP with Subscription support using IAPHUB",
-  "version": "1.0.22",
+  "version": "1.0.24",
   "main": "index.js",
   "license": "ISC",
   "author": "Steven McKeown",
@@ -11,12 +11,16 @@
     "publish": "adalo publish"
   },
   "adalo": {
-    "logo": "./example-logo.png",
+    "logo": "./logo.png",
     "displayName": "Adalo IAPHUB",
     "components": [
       {
         "name": "IAPHUB",
         "manifest": "./src/components/IAPHUB/manifest.json"
+      },
+      {
+        "name": "ActiveProducts",
+        "manifest": "./src/components/SubscriptionVerification/manifest.json"
       }
     ],
     "iosInstallScript": "scripts/install_ios.sh",
